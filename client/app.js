@@ -1,6 +1,12 @@
 Meteor.subscribe('messages');
 Meteor.subscribe('allUsernames');
 
+Messages.allow({
+  insert: function: (userId, doc) {
+    return (userId && doc.user === userId);
+  }
+});
+
 Template.messages.helpers({
   messages: Messages.find({})
 });
