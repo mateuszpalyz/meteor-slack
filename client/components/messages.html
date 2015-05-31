@@ -1,4 +1,5 @@
 <template name="messages">
+  {{> loginButtons}}
   <div class="message-history">
     {{#each messages}}
       {{> message text=text}}
