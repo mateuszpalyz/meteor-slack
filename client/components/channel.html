@@ -1,8 +1,13 @@
 <template name="channel">
   <li class="channel {{active}}">
-    <span>
-      <span class="prefix">#</span>
-      <span class="channel_name">{{name}}</span>
-    </span>
+    <a class="channel_name" href="/{{name}}">
+      <span class="unread">
+        0
+      </span>
+      <span>
+        <span class="prefix">#</span>
+        <span class="channel-name">{{name}}</span>
+      </span>
+    </a>
   </li>
 </template>
