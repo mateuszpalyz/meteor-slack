@@ -1,5 +1,12 @@
+Meteor.subscribe('channels');
 Meteor.subscribe('messages');
 Meteor.subscribe('allUsernames');
+
+Template.listings.helpers({
+  channels: function () {
+    return Channels.find();
+  }
+});
 
 Template.messages.helpers({
   messages: Messages.find({})
