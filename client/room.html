@@ -1,14 +1,9 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,700,900">
-</head>
-<body>
+<template name="app">
   {{> header}}
   <div class="main">
     {{> listings}}
-    {{> messages}}
+    {{> yield}}
   </div>
   {{> footer}}
-</body>
+</template>
+
